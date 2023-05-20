@@ -18,16 +18,16 @@ public class Anagram {
   public static void main(String[] args) {
     Scanner scnr = new Scanner(System.in);
     System.out.println("enter the first string");
-    String first = scnr.nextLine();
+    String first = scnr.nextLine().trim().replaceAll(" ", "");
     while (first.isBlank() || first.isEmpty()){
       System.out.println("enter a valid first string");
-      first = scnr.nextLine();
+      first = scnr.nextLine().trim().replaceAll(" ", "");
     }
     System.out.println("enter the second string");
-    String second = scnr.nextLine();
+    String second = scnr.nextLine().trim().replaceAll(" ", "");
     while (second.isBlank() || second.isEmpty()){
       System.out.println("enter a valid second string");
-      second = scnr.nextLine();
+      second = scnr.nextLine().trim().replaceAll(" ", "");
     }
     char[] charFirst = first.toCharArray();
     char[] charSecond = second.toCharArray();
